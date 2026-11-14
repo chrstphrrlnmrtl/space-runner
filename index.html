@@ -1,0 +1,158 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- CUSTOMIZATION AND ADJUSTMENT: Change the browser tab title here. -->
+    <title>Space Runner - Endless Space Adventure</title>
+
+    <!-- Responsive viewport settings -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CUSTOMIZATION AND ADJUSTMENT: Change the game description here. -->
+    <meta name="description" content="Pilot your spaceship through the galaxy in Space Runner! Dodge enemy spaceships and cosmic debris, jump over obstacles, and survive as long as possible in this endless space adventure.">
+
+    <!-- CUSTOMIZATION AND ADJUSTMENT: Change the Open Graph title here. -->
+    <meta property="og:title" content="Space Runner - Endless Space Adventure">
+
+    <!-- CUSTOMIZATION AND ADJUSTMENT: Change the Open Graph description here. -->
+    <meta property="og:description" content="Take control of your spaceship, avoid dangerous obstacles, and explore the endless galaxy in Space Runner!">
+
+    <!-- CUSTOMIZATION AND ADJUSTMENT: Replace with your publicly accessible game URL. -->
+    <meta property="og:url" content="https://yourdomain.com/space-runner">
+
+    <!-- CUSTOMIZATION AND ADJUSTMENT: Replace with your publicly accessible preview image URL. -->
+    <meta property="og:image" content="https://yourdomain.com/images/space-runner-preview.png">
+
+    <meta property="og:type" content="website">
+
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Main Game Container -->
+    <main class="game-container">
+
+        <!-- Game Header -->
+        <header class="game-header">
+
+            <!-- CUSTOMIZATION AND ADJUSTMENT: Change the main displayed game title here. -->
+            <h1 id="gameTitle">🚀 Space Runner</h1>
+
+            <!-- CUSTOMIZATION AND ADJUSTMENT: Change the game description here. -->
+            <p id="gameDescription">
+                Explore the endless galaxy! Pilot your spaceship, dodge enemy
+                spacecraft, avoid cosmic debris, and survive as long as you can.
+            </p>
+
+        </header>
+
+        <!-- Game Information -->
+        <section class="game-information">
+
+            <div class="score-container">
+                <p>Score</p>
+                <span id="scoreDisplay">0</span>
+            </div>
+
+            <div class="high-score-container">
+                <p>High Score</p>
+                <span id="highScoreDisplay">0</span>
+            </div>
+
+        </section>
+
+        <!-- Game Canvas Section -->
+        <section class="game-section">
+
+            <div class="canvas-container">
+
+                <!--
+                    Game Canvas
+                    Logical Resolution: 960 x 450 pixels
+                    All game graphics will be rendered using JavaScript.
+                -->
+                <canvas
+                    id="gameCanvas"
+                    width="960"
+                    height="450"
+                    aria-label="Space Runner gameplay area">
+                    Your browser does not support HTML Canvas.
+                </canvas>
+
+                <!-- Game Overlay -->
+                <div id="gameOverlay" class="game-overlay">
+
+                    <!-- CUSTOMIZATION AND ADJUSTMENT: Change the Game Over heading here. -->
+                    <h2 id="overlayTitle">Space Runner</h2>
+
+                    <!-- CUSTOMIZATION AND ADJUSTMENT: Change the Game Over message here. -->
+                    <p id="overlayMessage">
+                        Ready for an endless space adventure?
+                    </p>
+
+                    <!-- Start / Restart Button -->
+                    <!-- CUSTOMIZATION AND ADJUSTMENT: Change the Start Game button label here. -->
+                    <!-- CUSTOMIZATION AND ADJUSTMENT: Change the Restart Game button label here. -->
+                    <button
+                        id="startButton"
+                        type="button"
+                        data-start-text="Start Game"
+                        data-restart-text="Restart Game">
+                        Start Game
+                    </button>
+
+                </div>
+
+            </div>
+
+            <!-- Asset Loading Status -->
+            <p id="assetStatus" class="asset-status">
+                Preparing your spaceship...
+            </p>
+
+        </section>
+
+        <!-- Gameplay Instructions -->
+        <section class="instructions">
+
+            <h2>How to Play</h2>
+
+            <!-- CUSTOMIZATION AND ADJUSTMENT: Change the gameplay instructions here. -->
+            <p id="gameInstructions">
+                Press <strong>SPACE</strong> or <strong>ARROW UP</strong>
+                on your keyboard, or simply <strong>CLICK</strong> or
+                <strong>TAP</strong> the screen to make your spaceship jump
+                over incoming obstacles.
+            </p>
+
+        </section>
+
+        <!-- Game Theme Information -->
+        <section class="game-details">
+
+            <h2>Explore the Galaxy</h2>
+
+            <p>
+                Navigate through a mysterious Milky Way filled with glowing
+                nebulae, distant planets, shooting stars, enemy spaceships,
+                and dangerous cosmic debris.
+            </p>
+
+        </section>
+
+        <!-- Footer -->
+        <footer class="game-footer">
+            <p>Space Runner | Endless Space Adventure</p>
+        </footer>
+
+    </main>
+
+    <!-- Link to external JavaScript file -->
+    <script src="script.js"></script>
+
+</body>
+</html>

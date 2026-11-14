@@ -1,0 +1,688 @@
+
+/* ============================================
+   CUSTOMIZATION AND ADJUSTMENT — CSS
+   Change the values below to customize
+   the appearance of the game.
+   ============================================ */
+
+:root {
+
+    /* ========================================
+       A. PAGE BACKGROUND
+       ======================================== */
+
+    /* CUSTOMIZATION AND ADJUSTMENT:
+       Change the page background color. */
+    --page-background: #080b1a;
+
+    /* CUSTOMIZATION AND ADJUSTMENT:
+       Replace none with url("assets/page-bg.png")
+       to use a page background image. */
+    --page-background-image: none;
+
+    /* CUSTOMIZATION AND ADJUSTMENT:
+       Change how the background image is sized. */
+    --page-background-size: cover;
+
+    /* CUSTOMIZATION AND ADJUSTMENT:
+       Change the background image position. */
+    --page-background-position: center center;
+
+    /* CUSTOMIZATION AND ADJUSTMENT:
+       Change the background image repetition. */
+    --page-background-repeat: no-repeat;
+
+
+    /* ========================================
+       B. GAME COLORS
+       ======================================== */
+
+    /* CUSTOMIZATION AND ADJUSTMENT:
+       Main theme color for buttons and highlights. */
+    --primary-color: #8b5cf6;
+
+    /* CUSTOMIZATION AND ADJUSTMENT:
+       Secondary theme color for accents. */
+    --secondary-color: #22d3ee;
+
+    /* CUSTOMIZATION AND ADJUSTMENT:
+       Main text color. */
+    --text-color: #f8fafc;
+
+    /* CUSTOMIZATION AND ADJUSTMENT:
+       Secondary text color for descriptions. */
+    --secondary-text-color: #a5b4fc;
+
+    /* CUSTOMIZATION AND ADJUSTMENT:
+       Background color behind the game canvas. */
+    --game-background-color: #050816;
+
+
+    /* ========================================
+       C. FONT AND TEXT
+       ======================================== */
+
+    /* CUSTOMIZATION AND ADJUSTMENT:
+       Change the font used throughout the page. */
+    --font-family: Arial, Helvetica, sans-serif;
+
+    /* CUSTOMIZATION AND ADJUSTMENT:
+       Adjust the game title's font size. */
+    --game-title-size: 42px;
+
+    /* CUSTOMIZATION AND ADJUSTMENT:
+       Adjust the description's font size. */
+    --description-font-size: 16px;
+
+    /* CUSTOMIZATION AND ADJUSTMENT:
+       Adjust the gameplay instructions' font size. */
+    --instructions-font-size: 15px;
+
+    /* CUSTOMIZATION AND ADJUSTMENT:
+       Adjust the score numbers' font size. */
+    --score-font-size: 26px;
+
+
+    /* ========================================
+       D. GAME CONTAINER
+       ======================================== */
+
+    /* CUSTOMIZATION AND ADJUSTMENT:
+       Set the maximum width of the game container. */
+    --game-max-width: 1050px;
+
+    /* CUSTOMIZATION AND ADJUSTMENT:
+       Change the game border color. */
+    --game-border-color: #312e81;
+
+    /* CUSTOMIZATION AND ADJUSTMENT:
+       Change the game border thickness. */
+    --game-border-width: 2px;
+
+    /* CUSTOMIZATION AND ADJUSTMENT:
+       Change the game container's corner roundness. */
+    --game-border-radius: 18px;
+
+
+    /* ========================================
+       E. BUTTONS
+       ======================================== */
+
+    /* CUSTOMIZATION AND ADJUSTMENT:
+       Change the button background color. */
+    --button-background: #7c3aed;
+
+    /* CUSTOMIZATION AND ADJUSTMENT:
+       Change the button text color. */
+    --button-text-color: #ffffff;
+
+    /* CUSTOMIZATION AND ADJUSTMENT:
+       Change the button background on hover. */
+    --button-hover-background: #a78bfa;
+
+    /* CUSTOMIZATION AND ADJUSTMENT:
+       Change the button's corner roundness. */
+    --button-border-radius: 10px;
+
+    /* CUSTOMIZATION AND ADJUSTMENT:
+       Change the button's internal spacing. */
+    --button-padding: 14px 32px;
+
+
+    /* ========================================
+       F. SCORE DISPLAY
+       ======================================== */
+
+    /* CUSTOMIZATION AND ADJUSTMENT:
+       Change the score boxes' background. */
+    --score-background: #151b35;
+
+    /* CUSTOMIZATION AND ADJUSTMENT:
+       Change the score text color. */
+    --score-text-color: #67e8f9;
+
+    /* CUSTOMIZATION AND ADJUSTMENT:
+       Change the score boxes' border color. */
+    --score-border-color: #3730a3;
+
+
+    /* ========================================
+       G. GAME OVER OVERLAY
+       ======================================== */
+
+    /* CUSTOMIZATION AND ADJUSTMENT:
+       Change the background behind the overlay panel. */
+    --overlay-background: rgba(3, 7, 25, 0.82);
+
+    /* CUSTOMIZATION AND ADJUSTMENT:
+       Change the overlay panel's background color. */
+    --overlay-panel-background: #111936;
+
+    /* CUSTOMIZATION AND ADJUSTMENT:
+       Change the Game Over heading's color. */
+    --overlay-title-color: #f472b6;
+
+}
+
+
+/* ============================================
+   END OF CUSTOMIZATION AND ADJUSTMENT
+   CSS STYLING BELOW
+   ============================================ */
+
+
+/* ============================================
+   1. GENERAL PAGE STYLING
+   ============================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    min-height: 100%;
+}
+
+body {
+    min-height: 100vh;
+
+    font-family: var(--font-family);
+    color: var(--text-color);
+
+    background-color: var(--page-background);
+    background-image: var(--page-background-image);
+    background-size: var(--page-background-size);
+    background-position: var(--page-background-position);
+    background-repeat: var(--page-background-repeat);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 30px 15px;
+}
+
+
+/* ============================================
+   2. MAIN GAME CONTAINER
+   ============================================ */
+
+.game-container {
+    width: 100%;
+    max-width: var(--game-max-width);
+
+    background: rgba(12, 18, 43, 0.94);
+
+    border: var(--game-border-width) solid var(--game-border-color);
+    border-radius: var(--game-border-radius);
+
+    padding: 30px;
+
+    box-shadow:
+        0 0 20px rgba(124, 58, 237, 0.25),
+        0 0 50px rgba(34, 211, 238, 0.08);
+}
+
+
+/* ============================================
+   3. GAME HEADER
+   ============================================ */
+
+.game-header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.game-header h1 {
+    font-size: var(--game-title-size);
+    font-weight: 800;
+
+    color: var(--secondary-color);
+
+    margin-bottom: 12px;
+
+    text-shadow:
+        0 0 10px rgba(34, 211, 238, 0.6),
+        0 0 25px rgba(139, 92, 246, 0.5);
+}
+
+.game-header p {
+    max-width: 750px;
+
+    margin: 0 auto;
+
+    color: var(--secondary-text-color);
+    font-size: var(--description-font-size);
+
+    line-height: 1.7;
+}
+
+
+/* ============================================
+   4. SCORE DISPLAY
+   ============================================ */
+
+.game-information {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 20px;
+
+    margin-bottom: 18px;
+}
+
+.score-container,
+.high-score-container {
+    min-width: 150px;
+
+    padding: 12px 20px;
+
+    background: var(--score-background);
+
+    border: 1px solid var(--score-border-color);
+    border-radius: 10px;
+
+    text-align: center;
+
+    box-shadow:
+        0 0 12px rgba(34, 211, 238, 0.08);
+}
+
+.score-container p,
+.high-score-container p {
+    color: var(--secondary-text-color);
+
+    font-size: 13px;
+    font-weight: bold;
+
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+    margin-bottom: 5px;
+}
+
+.score-container span,
+.high-score-container span {
+    color: var(--score-text-color);
+
+    font-size: var(--score-font-size);
+    font-weight: bold;
+
+    text-shadow: 0 0 10px rgba(34, 211, 238, 0.4);
+}
+
+
+/* ============================================
+   5. GAME CANVAS SECTION
+   ============================================ */
+
+.game-section {
+    width: 100%;
+}
+
+.canvas-container {
+    width: 100%;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background: var(--game-background-color);
+
+    border: 2px solid var(--game-border-color);
+    border-radius: 12px;
+
+    box-shadow:
+        0 0 15px rgba(139, 92, 246, 0.25),
+        inset 0 0 20px rgba(34, 211, 238, 0.08);
+}
+
+#gameCanvas {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    aspect-ratio: 960 / 450;
+
+    background: var(--game-background-color);
+}
+
+
+/* ============================================
+   6. GAME OVER / START OVERLAY
+   ============================================ */
+
+.game-overlay {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 20px;
+
+    background: var(--overlay-background);
+
+    z-index: 10;
+}
+
+.game-overlay h2 {
+    color: var(--overlay-title-color);
+
+    font-size: clamp(25px, 5vw, 42px);
+
+    font-weight: 800;
+
+    margin-bottom: 15px;
+
+    text-shadow:
+        0 0 12px rgba(244, 114, 182, 0.5);
+}
+
+.game-overlay p {
+    color: var(--text-color);
+
+    font-size: var(--description-font-size);
+
+    line-height: 1.6;
+
+    margin-bottom: 25px;
+
+    max-width: 500px;
+}
+
+
+/* ============================================
+   7. START / RESTART BUTTON
+   ============================================ */
+
+#startButton {
+    background: var(--button-background);
+
+    color: var(--button-text-color);
+
+    border: none;
+    border-radius: var(--button-border-radius);
+
+    padding: var(--button-padding);
+
+    font-family: var(--font-family);
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+
+    box-shadow:
+        0 0 15px rgba(124, 58, 237, 0.4);
+}
+
+#startButton:hover {
+    background: var(--button-hover-background);
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 0 20px rgba(167, 139, 250, 0.6);
+}
+
+#startButton:active {
+    transform: translateY(0);
+}
+
+#startButton:focus-visible {
+    outline: 3px solid var(--secondary-color);
+    outline-offset: 4px;
+}
+
+
+/* ============================================
+   8. ASSET STATUS
+   ============================================ */
+
+.asset-status {
+    text-align: center;
+
+    margin-top: 10px;
+
+    color: var(--secondary-text-color);
+
+    font-size: 12px;
+    font-style: italic;
+
+    min-height: 18px;
+}
+
+
+/* ============================================
+   9. GAMEPLAY INSTRUCTIONS
+   ============================================ */
+
+.instructions {
+    margin-top: 30px;
+
+    padding: 20px;
+
+    background: rgba(30, 41, 80, 0.55);
+
+    border-left: 4px solid var(--secondary-color);
+
+    border-radius: 8px;
+}
+
+.instructions h2 {
+    color: var(--secondary-color);
+
+    font-size: 20px;
+
+    margin-bottom: 12px;
+}
+
+.instructions p {
+    color: var(--secondary-text-color);
+
+    font-size: var(--instructions-font-size);
+
+    line-height: 1.8;
+}
+
+.instructions strong {
+    color: var(--text-color);
+
+    font-weight: bold;
+}
+
+
+/* ============================================
+   10. GAME THEME INFORMATION
+   ============================================ */
+
+.game-details {
+    margin-top: 25px;
+
+    text-align: center;
+
+    padding: 20px 10px;
+}
+
+.game-details h2 {
+    color: var(--primary-color);
+
+    font-size: 21px;
+
+    margin-bottom: 12px;
+
+    text-shadow:
+        0 0 10px rgba(139, 92, 246, 0.4);
+}
+
+.game-details p {
+    color: var(--secondary-text-color);
+
+    font-size: var(--description-font-size);
+
+    line-height: 1.8;
+}
+
+
+/* ============================================
+   11. GAME FOOTER
+   ============================================ */
+
+.game-footer {
+    text-align: center;
+
+    margin-top: 15px;
+    padding-top: 18px;
+
+    border-top: 1px solid var(--game-border-color);
+}
+
+.game-footer p {
+    color: var(--secondary-text-color);
+
+    font-size: 12px;
+}
+
+
+/* ============================================
+   12. RESPONSIVE DESIGN - TABLETS
+   ============================================ */
+
+@media screen and (max-width: 768px) {
+
+    body {
+        padding: 20px 10px;
+        align-items: flex-start;
+    }
+
+    .game-container {
+        padding: 20px;
+    }
+
+    .game-header h1 {
+        font-size: 34px;
+    }
+
+    .game-information {
+        gap: 12px;
+    }
+
+    .score-container,
+    .high-score-container {
+        min-width: 130px;
+        padding: 10px 15px;
+    }
+
+}
+
+
+/* ============================================
+   13. RESPONSIVE DESIGN - MOBILE PHONES
+   ============================================ */
+
+@media screen and (max-width: 480px) {
+
+    body {
+        padding: 12px 8px;
+    }
+
+    .game-container {
+        padding: 15px 10px;
+
+        border-radius: 12px;
+    }
+
+    .game-header {
+        margin-bottom: 18px;
+    }
+
+    .game-header h1 {
+        font-size: 27px;
+    }
+
+    .game-header p {
+        font-size: 13px;
+    }
+
+    .game-information {
+        gap: 8px;
+        margin-bottom: 12px;
+    }
+
+    .score-container,
+    .high-score-container {
+        min-width: 0;
+        flex: 1;
+
+        padding: 9px 8px;
+    }
+
+    .score-container p,
+    .high-score-container p {
+        font-size: 10px;
+    }
+
+    .score-container span,
+    .high-score-container span {
+        font-size: 21px;
+    }
+
+    .game-overlay {
+        padding: 10px;
+    }
+
+    .game-overlay h2 {
+        font-size: 24px;
+        margin-bottom: 8px;
+    }
+
+    .game-overlay p {
+        font-size: 12px;
+        margin-bottom: 12px;
+    }
+
+    #startButton {
+        padding: 10px 20px;
+        font-size: 13px;
+    }
+
+    .instructions {
+        margin-top: 20px;
+        padding: 15px;
+    }
+
+    .instructions h2,
+    .game-details h2 {
+        font-size: 17px;
+    }
+
+    .instructions p,
+    .game-details p {
+        font-size: 12px;
+    }
+
+    .game-details {
+        margin-top: 15px;
+    }
+
+}
